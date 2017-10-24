@@ -1,0 +1,48 @@
+Oct 24th
+
+Graphics Code Design:
+    Keep Main simple
+    GUI class
+    Canvas--includes paintComponent method
+    Canvas class calls other classes ex: Squares calls it's own draw method on g2d context
+    
+
+JFrame hold Canvas and GUI--declared in main--can use flow layout
+
+GUI class declares/instantiates JSliders/buttons/text field/labels etc.  Stick buttons etc into own panels to control sizes
+
+
+Shape Interface:
+    Useful Methods: Intersect, getBounds, Contains, pathIterator
+    Implementing Classes: Area, Polygon, Rectangle, Path2D--build own shape
+    
+Color assignment: Three overlapping circles--one red, one blue, one green. Shades of colors are controlled by sliders. 
+    7 Different regions-use area class to construct intersections. 
+    
+    
+Vector Algebra:
+    Vector addition--add two displacements subsequently 
+    vector subtraction: V-W = V + +(-W)
+    
+    DotProduct: Angle between  V.W = if theta is the angle between two vectors, V and W then the dot product is the quantity
+                       length V * Length W cos theta
+                       In 3d dotproduct can be generalized to x1y1z1
+                       
+    Normalize Vector: Unit length = Vector V/length of V
+    
+    Point along a line: (x1,y1) (x2,y2), Vector V = (x2-x1, y2-y1) 0 
+        Midpoint x = p0 + 1/2V(x1+x2/2, y1+y2/2)
+        Any point = p0 + lambda(p1-P0) ~ (1-lambda)p0 + lambda * p1 == affine combo
+    
+    Cross Product: new vector that is perpendicular to other two vectors. Use right hand rule 
+        Vectors i, j, k: i x j =  k
+                         j x i = -k
+                         j x k =  i
+                         k x j = -i
+                         k x i =  j
+                         i x k = -j
+                         ixi or jxj or KxK = 0
+        Intuitive method: determinate of matrix
+                         
+  
+  

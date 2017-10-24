@@ -1,0 +1,32 @@
+Graphics Pipeline:
+
+Modeling->Transforms->Visibility->Projection/Clipping->Rasterize->Texture/Shading
+
+
+public void paintComponent(Graphics g) {
+        super.paintComponent(g);  //without this no background color set.
+    
+        Graphics2D g2d = (Graphics2D)g; //cast so we can use JAVA2D.
+        //instead of simple commands create own methods:
+        drawCharacter(g2d)
+        
+     }
+     
+Coordinate Systems:
+
+Cartesian Coordinate System: |__ XY plane with origin at (0,0)
+
+Vector: A displacement that has direction and length. Vector not fixed in space--sometimes drawn starting from origin
+    Point p + 2v = new point
+
+    Horizontal Vector i
+    Vertical Vector   j
+    Ex: 2i = 3j
+    Length of Vector is hypotenuse of right triangle , c^2 = a^2 + b ^2
+    
+Pythag proof: Using textbook visual: (a+b)^2 = c^2 + 4(1/2ab) = a^2 +2ab + b^2 = c^2 + 2ab = a^2 + b^2 = c^2 
+
+Law of Cosines: In a triangle with sides a, b, and c, let the angle Y be opposite the side c. 
+Then we have c2 = a2 + b2 − 2ab cos Y.
+
+HW: Given 3 points A,B,C in a plain use the law of cosines to calculate gamma 
