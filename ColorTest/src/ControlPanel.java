@@ -2,10 +2,13 @@ import java.awt.*;
 import javax.swing.*;
 import javax.swing.event.*;
 
+import org.w3c.dom.css.RGBColor;
+
 class ControlPanel extends JPanel implements ChangeListener
  {
  	ColorPanel cPanel;
 	JSlider redSlider, greenSlider, blueSlider;
+	int redValue, blueValue, greenValue;
  
  	public ControlPanel(ColorPanel cp)
 	{
@@ -59,8 +62,23 @@ class ControlPanel extends JPanel implements ChangeListener
    
    public void stateChanged(ChangeEvent ev) {
 	   JSlider whichSlider = (JSlider) ev.getSource();
-	   //if whichslier == redslider Cpanel.red = whichslider.getvalue
-  	  	//cpanel.repaint
+	   if (whichSlider == redSlider) {
+		redValue = redSlider.getValue();
+	   }
+	   if (whichSlider == blueSlider) {
+			blueValue = blueSlider.getValue();
+	   }
+	   if (whichSlider == greenSlider) {
+			greenValue = greenSlider.getValue();
+	   }
+	   cPanel.rb = new Color(redValue, 0, blueValue);
+	   cPanel.gb = new Color(0, greenValue, blueValue);
+	   cPanel.rg = new Color(redValue, greenValue, 0);
+	   cPanel.rgb = new Color(redValue, blueValue, greenValue);
+	   cPanel.red = new Color(redValue, 0, 0);
+	   cPanel.green = new Color(0, greenValue, 0);
+	   cPanel.blue = new Color(0, 0, blueValue);
+	   cPanel.repaint();
 	   
 	 }//end stateChanged
 

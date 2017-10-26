@@ -1,0 +1,21 @@
+Oct25th
+
+Spiraling Square Assignment: Store points in array p0,p1,p3,p4
+
+new value p0 + lambda (p1-p0) = (1-lambda)p0  + lambdaP1
+
+Class Design: Squares class, Main, GUI, Canvas
+
+GUI Class has several buttons-draw: sends appropriate parameters to canvas
+
+HSV color model: Hue, Saturation, Value
+    Hue: the color type (such as red, blue, or yellow).
+    Saturation : the intensity of the color.
+    Brightness (or Value) : the brightness of the color.
+    
+
+Vector Geometry: 
+    
+    
+ 
+

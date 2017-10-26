@@ -15,7 +15,7 @@ import java.awt.geom.*;
 public class SimpleCanvas extends JPanel implements MouseListener {
 	private static final long serialVersionUID = 1L;
 	Color myColor;
-	 Line2D.Double myLine;
+	Line2D.Double myLine;
     public SimpleCanvas () {
 		//The following is another way to guarantee correct size.	 
 		setPreferredSize(new Dimension(300,300));
@@ -36,7 +36,8 @@ public class SimpleCanvas extends JPanel implements MouseListener {
 		
 		g2d.setPaint(myColor);
 		g2d.draw(myLine);
-      //g2d.fillRect(-30,-30,30,30); //solid rectangle
+		g2d.drawLine(0, 0, 100, -100);
+		g2d.fillRect(-30,-30,30,30); //solid rectangle
 		
 	 }
 	 
